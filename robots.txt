@@ -1,0 +1,28 @@
+# Pratik Kharva — Full-Stack Developer Portfolio
+# https://pratikkharva.github.io/
+
+User-agent: *
+Allow: /
+Disallow: /*.json$
+
+# Be kind to crawlers hitting the résumé binary
+User-agent: *
+Allow: /PRATIK_KHARVA_.pdf
+
+# Known AI / archive bots — allow indexing (remove lines to opt out)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+Sitemap: https://pratikkharva.github.io/sitemap.xml
