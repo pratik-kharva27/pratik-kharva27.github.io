@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./pratik.jpeg" alt="Pratik Kharva — Full-Stack Developer" width="120" height="120" style="border-radius:50%" />
+<!-- <img src="./pratik.jpeg" alt="Pratik Kharva — Full-Stack Developer" width="120" height="120" style="border-radius:50%" /> -->
 
 # Pratik Kharva — Portfolio
 
