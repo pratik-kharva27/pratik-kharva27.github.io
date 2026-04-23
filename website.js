@@ -72,53 +72,57 @@
     },
   ];
 
+  // Icon source: https://simpleicons.org — CDN returns a colored SVG per slug+hex.
+  // `custom` is an inline fallback for non-brand concepts.
+  const TERMINAL_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>';
+  const API_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>';
+  const SQL_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></svg>';
+  const SCHEMA_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="12" y1="3" x2="12" y2="21"/></svg>';
+  const MODEL_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M7 7.5 10.5 16.5"/><path d="M17 7.5 13.5 16.5"/><path d="M7 6h10"/></svg>';
+
   const SKILL_CATEGORIES = [
     {
       title: 'Frontend',
-      iconClass: 'skills__3d-icon--cyan',
-      iconSvg: '<svg viewBox="0 0 48 48" class="skills__3d-icon skills__3d-icon--cyan"><rect x="4" y="4" width="40" height="40" rx="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 18l-6 6 6 6M32 18l6 6-6 6M22 34l4-20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      color: 'cyan',
       skills: [
-        { name: 'HTML5', level: 92 },
-        { name: 'CSS3', level: 85 },
-        { name: 'JavaScript', level: 88 },
-        { name: 'React.js', level: 82 },
-        { name: 'jQuery', level: 80 },
+        { name: 'HTML5',      slug: 'html5',      color: 'E34F26' },
+        { name: 'CSS',       slug: 'css',       color: '1572B6' },
+        { name: 'JavaScript', slug: 'javascript', color: 'F7DF1E' },
+        { name: 'React.js',   slug: 'react',      color: '61DAFB' },
+        { name: 'jQuery',     slug: 'jquery',     color: '0769AD' },
       ],
     },
     {
       title: 'Backend',
-      iconClass: 'skills__3d-icon--amber',
-      iconSvg: '<svg viewBox="0 0 48 48" class="skills__3d-icon skills__3d-icon--amber"><path d="M24 4l18 10v20L24 44 6 34V14z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 4v20m0 0l18-10m-18 10L6 14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>',
+      color: 'amber',
       skills: [
-        { name: 'Node.js', level: 82 },
-        { name: 'Express.js', level: 80 },
-        { name: 'Python', level: 72 },
-        { name: 'REST APIs', level: 85 },
-        { name: 'GraphQL', level: 70 },
+        { name: 'Node.js',    slug: 'nodedotjs', color: '339933' },
+        { name: 'Express.js', slug: 'express',   color: 'ffffff' },
+        { name: 'Python',     slug: 'python',    color: '3776AB' },
+        { name: 'REST APIs',  custom: API_ICON,  tint: 'amber' },
+        { name: 'GraphQL',    slug: 'graphql',   color: 'E10098' },
       ],
     },
     {
       title: 'Database',
-      iconClass: 'skills__3d-icon--purple',
-      iconSvg: '<svg viewBox="0 0 48 48" class="skills__3d-icon skills__3d-icon--purple"><ellipse cx="24" cy="12" rx="16" ry="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12v24c0 3.3 7.2 6 16 6s16-2.7 16-6V12" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 24c0 3.3 7.2 6 16 6s16-2.7 16-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>',
+      color: 'purple',
       skills: [
-        { name: 'MySQL', level: 85 },
-        { name: 'MongoDB', level: 75 },
-        { name: 'SQL Queries', level: 82 },
-        { name: 'Schema Design', level: 78 },
-        { name: 'Data Modeling', level: 75 },
+        { name: 'MySQL',         slug: 'mysql',   color: '4479A1' },
+        { name: 'MongoDB',       slug: 'mongodb', color: '47A248' },
+        { name: 'SQL Queries',   custom: SQL_ICON,    tint: 'purple' },
+        { name: 'Schema Design', custom: SCHEMA_ICON, tint: 'purple' },
+        { name: 'Data Modeling', custom: MODEL_ICON,  tint: 'purple' },
       ],
     },
     {
       title: 'Tools & DevOps',
-      iconClass: 'skills__3d-icon--green',
-      iconSvg: '<svg viewBox="0 0 48 48" class="skills__3d-icon skills__3d-icon--green"><circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 4v8M24 36v8M4 24h8M36 24h8M9.9 9.9l5.6 5.6M32.5 32.5l5.6 5.6M9.9 38.1l5.6-5.6M32.5 15.5l5.6-5.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+      color: 'green',
       skills: [
-        { name: 'Git & GitHub', level: 85 },
-        { name: 'VS Code', level: 92 },
-        { name: 'Postman', level: 85 },
-        { name: 'Linux / CLI', level: 72 },
-        { name: 'XAMPP', level: 80 },
+        { name: 'Git & GitHub', slug: 'git',              color: 'F05032' },
+        { name: 'VS Code',      slug: 'visualstudiocode', color: '007ACC' },
+        { name: 'Postman',      slug: 'postman',          color: 'FF6C37' },
+        { name: 'Linux / CLI',  custom: TERMINAL_ICON,    tint: 'green' },
+        { name: 'XAMPP',        slug: 'xampp',            color: 'FB7A24' },
       ],
     },
   ];
@@ -129,7 +133,7 @@
   const navLinks = document.querySelectorAll('.navbar__link');
   const navLinksContainer = document.querySelector('.navbar__links');
   const burger = document.querySelector('.navbar__burger');
-  const NAV_SECTIONS = ['hero', 'about', 'projects', 'case-studies', 'skills', 'blog', 'faq', 'contact'];
+  const NAV_SECTIONS = ['hero', 'about', 'experience', 'projects', 'case-studies', 'skills', 'education', 'blog', 'contact'];
 
   function updateNavbar() {
     // Scrolled state
@@ -267,61 +271,77 @@
   // ── Skills Tabs ──
 
   const skillTabs = document.querySelectorAll('.skills__tab');
-  const barsWrap = document.querySelector('.skills__bars-wrap');
+  const skillPanel = document.querySelector('.skills__panel');
+  const skillsDetail = document.querySelector('.skills__detail');
   let activeTab = 0;
-  let barsVisible = false;
 
-  function renderSkillBars(categoryIndex) {
+  function renderSkillPanel(categoryIndex) {
     const category = SKILL_CATEGORIES[categoryIndex];
-    barsWrap.innerHTML = category.skills.map((skill, i) => {
-      const delay = (i * 0.1) + 's';
-      const width = barsVisible ? skill.level + '%' : '0%';
+    const items = category.skills.map(function (skill, i) {
+      const delay = (i * 60) + 'ms';
+      const icon = skill.slug
+        ? '<img class="skills__icon-img" src="https://cdn.simpleicons.org/' + skill.slug + '/' + skill.color + '" alt="" width="36" height="36" loading="lazy" decoding="async">'
+        : '<span class="skills__icon-svg skills__icon-svg--' + (skill.tint || category.color) + '">' + skill.custom + '</span>';
       return (
-        '<div class="skills__bar-item" style="--delay: ' + delay + '">' +
-          '<div class="skills__bar-header">' +
-            '<span class="skills__bar-name">' + skill.name + '</span>' +
-            '<span class="skills__bar-pct">' + skill.level + '%</span>' +
-          '</div>' +
-          '<div class="skills__bar-track">' +
-            '<div class="skills__bar-fill" style="width: ' + width + '; --delay: ' + delay + '"></div>' +
-          '</div>' +
-        '</div>'
+        '<li class="skills__icon-item" style="--delay:' + delay + '">' +
+          '<div class="skills__icon-wrap">' + icon + '</div>' +
+          '<span class="skills__icon-name">' + skill.name + '</span>' +
+        '</li>'
       );
     }).join('');
+    skillPanel.setAttribute('data-active', String(categoryIndex));
+    skillPanel.innerHTML = '<ul class="skills__icon-grid skills__icon-grid--' + category.color + '" role="list">' + items + '</ul>';
   }
 
-  skillTabs.forEach((tab, i) => {
-    tab.addEventListener('click', function () {
-      activeTab = i;
-      skillTabs.forEach(t => t.classList.remove('skills__tab--active'));
-      this.classList.add('skills__tab--active');
-      renderSkillBars(i);
+  function activateTab(i) {
+    if (i === activeTab) return;
+    activeTab = i;
+    skillTabs.forEach(function (t, idx) {
+      const isActive = idx === i;
+      t.classList.toggle('skills__tab--active', isActive);
+      t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      t.setAttribute('tabindex', isActive ? '0' : '-1');
+    });
+    if (skillsDetail) {
+      skillsDetail.setAttribute('data-active-color', SKILL_CATEGORIES[i].color);
+    }
+    // Fade out, swap, fade in — keeps the panel feeling like one surface
+    skillPanel.classList.add('skills__panel--leaving');
+    window.setTimeout(function () {
+      renderSkillPanel(i);
+      skillPanel.classList.remove('skills__panel--leaving');
+    }, 140);
+  }
+
+  // Hover = activate (desktop); click + keyboard still work everywhere.
+  // Hover is cheap because we pre-render on activation, not on every mousemove.
+  const prefersNoHover = window.matchMedia('(hover: none)').matches;
+
+  skillTabs.forEach(function (tab, i) {
+    tab.setAttribute('tabindex', i === 0 ? '0' : '-1');
+    tab.addEventListener('click', function () { activateTab(i); });
+    if (!prefersNoHover) {
+      tab.addEventListener('mouseenter', function () { activateTab(i); });
+      tab.addEventListener('focus', function () { activateTab(i); });
+    }
+    tab.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft' && e.key !== 'Home' && e.key !== 'End') return;
+      e.preventDefault();
+      let next = i;
+      if (e.key === 'ArrowRight') next = (i + 1) % skillTabs.length;
+      else if (e.key === 'ArrowLeft') next = (i - 1 + skillTabs.length) % skillTabs.length;
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = skillTabs.length - 1;
+      skillTabs[next].focus();
+      activateTab(next);
     });
   });
 
   // Initial render
-  renderSkillBars(0);
-
-  // IntersectionObserver for skill bars
-  const skillsDetail = document.querySelector('.skills__detail');
   if (skillsDetail) {
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          barsVisible = true;
-          // Animate existing bars
-          var fills = barsWrap.querySelectorAll('.skills__bar-fill');
-          var items = SKILL_CATEGORIES[activeTab].skills;
-          fills.forEach(function (fill, idx) {
-            if (items[idx]) {
-              fill.style.width = items[idx].level + '%';
-            }
-          });
-        }
-      });
-    }, { threshold: 0.3 });
-    observer.observe(skillsDetail);
+    skillsDetail.setAttribute('data-active-color', SKILL_CATEGORIES[0].color);
   }
+  renderSkillPanel(0);
 
   // ── Contact Form ──
 

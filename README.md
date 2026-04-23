@@ -26,7 +26,7 @@ A single-page "business card" view with mouse-parallax tilt, specular highlight,
 
 ### Multi-Section Portfolio — `website.html`
 
-Full developer portfolio: hero, about, projects grid with filters, case studies, skills tabs, blog teasers, FAQ, and contact form. Mobile-first, fully responsive, SEO-optimised.
+Full developer portfolio: hero, about, experience timeline, projects grid with filters, case studies, skills tabs, education cards, blog teasers, and contact form. Mobile-first, fully responsive, SEO-optimised.
 
 ![Multi-section Portfolio preview](./docs/preview-portfolio.svg)
 
@@ -134,7 +134,7 @@ TL;DR of what's already in the code:
 - Canonical URLs + `hreflang`
 - `meta robots` per-bot directives
 - Open Graph + Twitter Card tags
-- JSON-LD schemas: `Person`, `WebSite`, `ProfilePage`, `ProfessionalService`, `BreadcrumbList`, `Blog`, `BlogPosting` ×3, `FAQPage`
+- JSON-LD schemas: `Person`, `WebSite`, `ProfilePage`, `ProfessionalService`, `BreadcrumbList`, `Blog`, `BlogPosting` ×3
 - `sitemap.xml` + `robots.txt` with `Sitemap:` directive
 - Preload hints, `fetchpriority`, safe-area, no horizontal overflow
 
