@@ -23,7 +23,3 @@ yarn-debug.log*
 node_modules/
 dist/
 build/
-
-# .md files
-ANALYTICS.md
-SEO.md
