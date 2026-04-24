@@ -20,7 +20,7 @@ Personal portfolio site. Static HTML / CSS / JS, no build step.
 
 A single-page "business card" view with mouse-parallax tilt, specular highlight, floating tech-tag cloud, animated metrics, and a résumé download CTA. Supports dark + light themes.
 
-![3D Parallax Profile Card preview](./docs/preview-card.svg)
+![3D Parallax Profile Card preview](./docs/preview-card.png)
 
 > Replace `docs/preview-card.svg` with a real screenshot to make this the hero image. See [Screenshots](#screenshots) below for how to capture one at the right dimensions.
 
@@ -28,7 +28,7 @@ A single-page "business card" view with mouse-parallax tilt, specular highlight,
 
 Full developer portfolio: hero, about, experience timeline, projects grid with filters, case studies, skills tabs, education cards, blog teasers, and contact form. Mobile-first, fully responsive, SEO-optimised.
 
-![Multi-section Portfolio preview](./docs/preview-portfolio.svg)
+![Multi-section Portfolio preview](./docs/preview-portfolio.png)
 
 > Replace `docs/preview-portfolio.svg` with a real screenshot. Hero dimensions are 1200 × 630 (matches Open Graph / Twitter Card size).
 
