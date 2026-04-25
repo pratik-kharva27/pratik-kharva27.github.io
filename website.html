@@ -36,26 +36,34 @@
   <meta property="og:url" content="https://pratikkharva.github.io/website.html" />
   <meta property="og:title" content="Pratik Kharva — Full Stack Developer Portfolio | Web Developer in Ahmedabad" />
   <meta property="og:description" content="Experience, projects, case studies, skills, and blog posts from a Full Stack Developer in India — Pratik Kharva, web developer in Ahmedabad. React.js, Node.js, MySQL, MongoDB." />
-  <meta property="og:image" content="https://pratikkharva.github.io/pratik.jpeg" />
+  <meta property="og:image" content="https://pratikkharva.github.io/docs/preview-portfolio.jpg" />
   <meta property="og:image:alt" content="Pratik Kharva — Full Stack Developer Portfolio, Web Developer in Ahmedabad" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image:width" content="1355" />
+  <meta property="og:image:height" content="639" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Pratik Kharva — Full Stack Developer Portfolio | Ahmedabad" />
   <meta name="twitter:description" content="Full Stack Developer in India &amp; web developer in Ahmedabad. React.js, Node.js, MySQL, MongoDB. Experience, projects, case studies, and blog." />
-  <meta name="twitter:image" content="https://pratikkharva.github.io/pratik.jpeg" />
+  <meta name="twitter:image" content="https://pratikkharva.github.io/docs/preview-portfolio.jpg" />
   <meta name="twitter:image:alt" content="Pratik Kharva — Full Stack Developer Portfolio, Web Developer in Ahmedabad" />
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2300f0ff'/%3E%3Cstop offset='100%25' stop-color='%23ffb400'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='%230a0a0f' stroke='url(%23g)' stroke-width='2.5'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Syne,sans-serif' font-size='30' font-weight='800' letter-spacing='-2' fill='url(%23g)'%3EPK%3C/text%3E%3C/svg%3E" />
   <link rel="apple-touch-icon" href="pratik.jpeg" />
 
   <!-- Resource hints -->
-  <link rel="preload" as="image" href="pratik.jpeg" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EHNPRM5SDY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EHNPRM5SDY');
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="website.css">
+  <link rel="stylesheet" href="website.min.css">
 
   <!-- Structured data (schema.org JSON-LD) -->
   <script type="application/ld+json">
@@ -219,30 +227,38 @@
         </span>
       </a>
 
-      <div class="navbar__links">
-        <a href="./index.html" class="navbar__link navbar__link--external" aria-label="View 3D Profile Card">
-          <!-- <svg class="navbar__link-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-            <rect x="3" y="5" width="18" height="14" rx="2"/>
-            <circle cx="9" cy="11" r="2"/>
-            <path d="M14 10h4M14 13h4M7 16h10"/>
-          </svg> -->
-          3D Card
-        </a>
+      <div class="navbar__links" id="primary-nav">
+        <p class="navbar__group-label" aria-hidden="true">Main</p>
         <a href="#hero" class="navbar__link navbar__link--active">Home</a>
         <a href="#about" class="navbar__link">About</a>
         <a href="#experience" class="navbar__link">Experience</a>
         <a href="#projects" class="navbar__link">Projects</a>
+
+        <p class="navbar__group-label" aria-hidden="true">Career</p>
         <a href="#case-studies" class="navbar__link">Case Studies</a>
         <a href="#skills" class="navbar__link">Skills</a>
         <a href="#education" class="navbar__link">Education</a>
+        <a href="#certifications" class="navbar__link">Certifications</a>
+
+        <p class="navbar__group-label" aria-hidden="true">More</p>
         <a href="#blog" class="navbar__link">Blog</a>
         <a href="#contact" class="navbar__link">Contact</a>
-        <a href="#contact" class="glow-btn navbar__cta">Hire Me</a>
+
+        <div class="navbar__drawer-footer">
+          <a href="./index.html" class="navbar__link navbar__link--external">3D Card</a>
+          <a href="#contact" class="glow-btn navbar__cta">Hire Me</a>
+        </div>
       </div>
 
-      <button class="navbar__burger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="navbar__backdrop" aria-hidden="true"></div>
+
+      <div class="navbar__actions">
+        <a href="./index.html" class="navbar__link navbar__link--external">3D Card</a>
+        <a href="#contact" class="glow-btn navbar__cta">Hire Me</a>
+        <button class="navbar__burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -279,7 +295,7 @@
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
-            <a href="PRATIK_KHARVA_.pdf" download="Pratik_Kharva_Resume.pdf" class="glow-btn glow-btn--outline">
+            <a href="PRATIK_KHARVA_.pdf" download="Pratik_Kharva_Resume.pdf" target="_blank" rel="noopener" class="glow-btn glow-btn--outline">
               Download Résumé
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                 <path d="M12 3v12M7 10l5 5 5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -906,6 +922,42 @@
     </section>
 
     <!-- ══════════════════════════════════════════
+         Certifications Section
+         ══════════════════════════════════════════ -->
+    <section id="certifications" class="education" aria-labelledby="certifications-title">
+      <div class="container">
+        <header class="education__header reveal">
+          <p class="section-label">Certifications</p>
+          <h2 class="section-title" id="certifications-title">Certification Courses</h2>
+        </header>
+
+        <div class="education__grid reveal reveal-delay-1">
+
+          <article class="edu-card glass-card">
+            <div class="edu-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m9 14-2 7 5-3 5 3-2-7"/></svg>
+            </div>
+            <div class="edu-card__body">
+              <h3 class="edu-card__degree">Web Designing</h3>
+              <p class="edu-card__meta"><time>2014 &mdash; 2015</time></p>
+            </div>
+          </article>
+
+          <article class="edu-card glass-card">
+            <div class="edu-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m9 14-2 7 5-3 5 3-2-7"/></svg>
+            </div>
+            <div class="edu-card__body">
+              <h3 class="edu-card__degree">Python</h3>
+              <p class="edu-card__meta"><time>2018</time></p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
          Blog Section
          ══════════════════════════════════════════ -->
     <section id="blog" class="blog" aria-labelledby="blog-title">
@@ -1176,7 +1228,7 @@
           <a href="./index.html" class="footer__link">3D Card</a>
           <a href="https://github.com/pratik-kharva27" target="_blank" rel="noopener" class="footer__link">GitHub</a>
           <a href="https://linkedin.com/in/pratik-kharva-277143243" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
-          <a href="PRATIK_KHARVA_.pdf" download class="footer__link">Résumé</a>
+          <a href="PRATIK_KHARVA_.pdf" download target="_blank" rel="noopener" class="footer__link">Résumé</a>
           <a href="mailto:pratikkharva01@gmail.com" class="footer__link">Email</a>
         </div>
       </div>
@@ -1189,15 +1241,6 @@
     </div>
   </footer>
 
-  <script src="website.js"></script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EHNPRM5SDY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EHNPRM5SDY');
-</script>
+  <script src="website.min.js" defer></script>
 </body>
 </html>

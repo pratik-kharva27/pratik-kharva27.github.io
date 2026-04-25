@@ -7,15 +7,3 @@ Allow: /PRATIK_KHARVA_.pdf
 Disallow: /*.json$
 
 Sitemap: https://pratikkharva.github.io/sitemap.xml
-
-google-site-verification: googlef7badce833be4118.html
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EHNPRM5SDY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EHNPRM5SDY');
-</script>

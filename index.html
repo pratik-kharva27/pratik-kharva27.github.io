@@ -37,26 +37,34 @@
   <meta property="og:url" content="https://pratikkharva.github.io/">
   <meta property="og:title" content="Pratik Kharva — React Developer Portfolio | Web Developer in Ahmedabad">
   <meta property="og:description" content="React developer portfolio of Pratik Kharva — a frontend developer from India and web developer in Ahmedabad building responsive web apps with React.js, Node.js, MySQL, and MongoDB.">
-  <meta property="og:image" content="https://pratikkharva.github.io/pratik.jpeg">
+  <meta property="og:image" content="https://pratikkharva.github.io/docs/preview-portfolio.jpg">
   <meta property="og:image:alt" content="Pratik Kharva — React Developer Portfolio, Web Developer in Ahmedabad">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1355">
+  <meta property="og:image:height" content="639">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pratik Kharva — React Developer Portfolio | Ahmedabad">
   <meta name="twitter:description" content="Frontend developer in India &amp; web developer in Ahmedabad. React.js, Node.js, MySQL, MongoDB.">
-  <meta name="twitter:image" content="https://pratikkharva.github.io/pratik.jpeg">
+  <meta name="twitter:image" content="https://pratikkharva.github.io/docs/preview-portfolio.jpg">
   <meta name="twitter:image:alt" content="Pratik Kharva — React Developer Portfolio, Web Developer in Ahmedabad">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2300f0ff'/%3E%3Cstop offset='100%25' stop-color='%23ffb400'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='%230b0b0e' stroke='url(%23g)' stroke-width='2.5'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Syne,sans-serif' font-size='30' font-weight='800' letter-spacing='-2' fill='url(%23g)'%3EPK%3C/text%3E%3C/svg%3E">
   <link rel="apple-touch-icon" href="pratik.jpeg">
 
   <!-- Resource hints -->
-  <link rel="preload" as="image" href="pratik.jpeg" fetchpriority="high">
-  <link rel="dns-prefetch" href="https://readme-typing-svg.demolab.com">
+  <link rel="preload" as="image" href="pratik.webp" type="image/webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EHNPRM5SDY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EHNPRM5SDY');
+  </script>
+
+  <link rel="stylesheet" href="style.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Outfit:wght@300..700&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet">
 
   <!-- Structured data (schema.org JSON-LD) -->
@@ -209,16 +217,18 @@
           <div class="card__avatar-wrap">
             <div class="card__avatar-ring">
               <div class="card__avatar">
-                <!-- src="https://api.dicebear.com/9.x/notionists/svg?seed=Sparrow&backgroundColor=c0aede" -->
-                <img
-                  src="pratik.jpeg"
-                  alt="Pratik Kharva — Full-Stack Developer from Ahmedabad"
-                  width="96"
-                  height="96"
-                  loading="eager"
-                  fetchpriority="high"
-                  decoding="async"
-                />
+                <picture>
+                  <source srcset="pratik.webp" type="image/webp">
+                  <img
+                    src="pratik.jpeg"
+                    alt="Pratik Kharva — Full-Stack Developer from Ahmedabad"
+                    width="96"
+                    height="96"
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                  />
+                </picture>
               </div>
             </div>
           </div>
@@ -240,19 +250,10 @@
           </div>
         </header>
 
-        <!-- Typing tagline -->
+        <!-- Typing tagline (animated by script.js — falls back to static text) -->
         <div class="card__tagline" style="--delay: 0.42s">
           <span class="card__tagline-cursor" aria-hidden="true">&gt;</span>
-          <!-- MongoDB+%E2%80%A2+PostgreSQL+%E2%80%A2+Docker+%E2%80%A2+AWS" -->
-          <img
-            class="card__tagline-svg"
-            src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=500&size=12&duration=3200&pause=900&color=E8C78F&background=00000000&vCenter=true&width=340&height=20&lines=Full-Stack+Developer+%E2%80%A2+Pratik Kharva;Crafting+scalable%2C+high-performance+apps;JavaScript+%E2%80%A2+React.js+%E2%80%A2+Node.js+%E2%80%A2+Express";
-            alt="Pratik Kharva — Full-Stack Developer. Skills: JavaScript, React.js, Node.js, Express."
-            width="340"
-            height="20"
-            loading="lazy"
-            decoding="async"
-          />
+          <span class="card__tagline-text" id="cardTagline" aria-label="Pratik Kharva — Full-Stack Developer building React, Node.js, and Express apps.">Full-Stack Developer · Pratik Kharva</span>
         </div>
 
         <!-- Metrics -->
@@ -394,15 +395,6 @@
     </div>
   </main>
 
-  <script src="script.js"></script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EHNPRM5SDY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EHNPRM5SDY');
-</script>
+  <script src="script.min.js" defer></script>
 </body>
 </html>
